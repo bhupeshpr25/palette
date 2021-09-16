@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+:root {
+  --primary: #d81e5d;
+  --secondary: #8a4fff;
+  --light: #eee;
+  --grey: #aaa;
+  --dark: #1e2f42;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+}
+
+body {
+  background-color: var(--light);
+}
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--dark);
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--grey);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.generator-button {
+  color: var(--primary);
+  font-size: inherit;
+  font-weight: 700;
+  background: linear-gradient(
+    to bottom right,
+    var(--primary),
+    var(--secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h4 {
+  color: var(--grey);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.colours {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.colour {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--dark);
+  color: #fff;
+  border-radius: 1rem;
+  transition: 0.4s ease-out;
+  border: 2px solid transparent;
+}
+
+.colour.copied {
+  border: 2px solid #00ff88;
+}
+
+button,
+input {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+}
+
+.lock-toggle {
+  opacity: 0.5;
+  transition: 0.4s linear;
+}
+
+.lock-toggle.is-locked {
+  opacity: 1;
+}
+
+.colour-input {
+  text-align: center;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .colours {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .colours {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .colour {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    padding-bottom: 300px;
+  }
+
+  .colour-input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
