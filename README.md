@@ -2,4 +2,4 @@
 colour palette generator using Vanilla JS
 
 
-live link -> https://hanakok9.github.io/palette/
+live link -> https://bhupeshpr25.github.io/palette/
